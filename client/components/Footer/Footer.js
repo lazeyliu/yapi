@@ -115,7 +115,7 @@ Footer.defaultProps = {
       ],
     },
     {
-      title: `Copyright © 2018-${new Date().getFullYear()} YMFE`,
+      title: `Copyright © 2018-${new Date().getFullYear()} YMFE With YAPI-X 2.7`,
       linkList: [
         {
           itemTitle: `版本: ${version} `,
