@@ -97,7 +97,7 @@ class Login extends Component {
         {isLDAP && (
           <FormItem>
             <RadioGroup defaultValue="ldap" onChange={this.handleFormLayoutChange}>
-              <Radio value="ldap">LDAP</Radio>
+              <Radio value="ldap">域号登录</Radio>
               <Radio value="normal">普通登录</Radio>
             </RadioGroup>
           </FormItem>
@@ -108,7 +108,7 @@ class Login extends Component {
             <Input
               style={changeHeight}
               prefix={<Icon type="user" style={{ fontSize: 13 }} />}
-              placeholder="Email"
+              placeholder="账号"
             />
           )}
         </FormItem>
@@ -122,7 +122,7 @@ class Login extends Component {
               style={changeHeight}
               prefix={<Icon type="lock" style={{ fontSize: 13 }} />}
               type="password"
-              placeholder="Password"
+              placeholder="密码"
             />
           )}
         </FormItem>

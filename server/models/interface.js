@@ -265,7 +265,7 @@ class interfaceModel extends baseModel {
       .exec()
   }
 
-  listByInterStatus(catid, status) {
+  listByInterStatus(catid, interId, status) {
     let option = {}
     if (status === 'open') {
       option = {
@@ -276,6 +276,9 @@ class interfaceModel extends baseModel {
       option = {
         catid: catid,
       }
+    }
+    if(interId){
+      option._id=interId;
     }
     return this.model.find(option).select().sort({ title: 1 }).exec()
   }
