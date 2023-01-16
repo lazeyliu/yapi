@@ -18,12 +18,15 @@ class exportSwaggerController extends baseController {
        No DRY,but i have no idea to optimize it.
     */
 
-    async handleListClass(pid, status) {
+    async handleListClass(pid, catId, interId, status) {
         let result = await this.catModel.list(pid),
             newResult = [];
         for (let i = 0, item, list; i < result.length; i++) {
             item = result[i].toObject();
-            list = await this.interModel.listByInterStatus(item._id, status);
+            list = await this.interModel.listByInterStatus(item._id,interId, status);
+            if (catId && catId != "" && catId != item._id) {
+                list = []
+            }
             list = list.sort((a, b) => {
                 return a.index - b.index;
             });
@@ -70,7 +73,9 @@ class exportSwaggerController extends baseController {
         let pid = ctx.request.query.pid;
         let type = ctx.request.query.type;
         let status = ctx.request.query.status;
-
+        // 接口id，可以导出单个接口
+        let interId = ctx.request.query.interId;
+        let catId = ctx.request.query.catId;
         if (!pid) {
             ctx.body = yapi.commons.resReturn(null, 200, 'pid 不为空');
         }
@@ -79,15 +84,21 @@ class exportSwaggerController extends baseController {
         try {
             curProject = await this.projectModel.get(pid);
             ctx.set('Content-Type', 'application/octet-stream');
-            const list = await this.handleListClass(pid, status);
-
+            const list = await this.handleListClass(pid,catId,interId, status);
+            let filename = `${curProject.name}_swaggerApi.json`;
+            // 下载文件名称
+            if (interId && list && list.length > 0 && list[0].list && list.length == 1) {
+                let title = list[0].list[0].title
+                filename = `${curProject.name}_${list[0].name}_${title}.json`
+            }
             switch (type) {
                 case 'OpenAPIV2':
                     { //in this time, only implemented OpenAPI V2.0
                         let data = this.handleExistId(list);
                         let model = await convertToSwaggerV2Model(data);
                         tp = JSON.stringify(model, null, 2);
-                        ctx.set('Content-Disposition', `attachment; filename=swaggerApi.json`);
+                        filename = encodeURIComponent(filename)
+                        ctx.set('Content-Disposition', `attachment; filename=${filename}`);
                         return (ctx.body = tp);
                     }
                 default:
