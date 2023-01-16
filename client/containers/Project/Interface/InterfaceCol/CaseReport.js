@@ -28,26 +28,26 @@ const CaseReport = function(props) {
       <Tabs defaultActiveKey="request">
         <TabPane className="case-report-pane" tab="Request" key="request">
           <Row className="case-report">
-            <Col className="case-report-title" span="6">
+            <Col className="case-report-title" span={6}>
               Url
             </Col>
-            <Col span="18">{props.url}</Col>
+            <Col span={18}>{props.url}</Col>
           </Row>
           {props.query ? (
             <Row className="case-report">
-              <Col className="case-report-title" span="6">
+              <Col className="case-report-title" span={6}>
                 Query
               </Col>
-              <Col span="18">{props.query}</Col>
+              <Col span={18}>{props.query}</Col>
             </Row>
           ) : null}
 
           {props.headers ? (
             <Row className="case-report">
-              <Col className="case-report-title" span="6">
+              <Col className="case-report-title" span={6}>
                 Headers
               </Col>
-              <Col span="18">
+              <Col span={18}>
                 <pre>{headers}</pre>
               </Col>
             </Row>
@@ -55,10 +55,10 @@ const CaseReport = function(props) {
 
           {params ? (
             <Row className="case-report">
-              <Col className="case-report-title" span="6">
+              <Col className="case-report-title" span={6}>
                 Body
               </Col>
-              <Col span="18">
+              <Col span={18}>
                 <pre style={{ whiteSpace: 'pre-wrap' }}>{params}</pre>
               </Col>
             </Row>
@@ -66,29 +66,29 @@ const CaseReport = function(props) {
         </TabPane>
         <TabPane className="case-report-pane" tab="Response" key="response">
           <Row  className="case-report">
-            <Col className="case-report-title" span="6">
+            <Col className="case-report-title" span={6}>
               HttpCode
             </Col>
-            <Col span="18">
+            <Col span={18}>
               <pre>{httpCode}</pre>
             </Col>
           </Row>
           {props.res_header ? (
             <Row className="case-report">
-              <Col className="case-report-title" span="6">
+              <Col className="case-report-title" span={6}>
                 Headers
               </Col>
-              <Col span="18">
+              <Col span={18}>
                 <pre>{res_header}</pre>
               </Col>
             </Row>
           ) : null}
           {props.res_body ? (
             <Row className="case-report">
-              <Col className="case-report-title" span="6">
+              <Col className="case-report-title" span={6}>
                 Body
               </Col>
-              <Col span="18">
+              <Col span={18}>
                 <pre>{res_body}</pre>
               </Col>
             </Row>
@@ -97,10 +97,10 @@ const CaseReport = function(props) {
         <TabPane className="case-report-pane" tab="验证结果" key="valid">
           {props.validRes ? (
             <Row className="case-report">
-              <Col className="case-report-title" span="6">
+              <Col className="case-report-title" span={6}>
                 验证结果
               </Col>
-              <Col span="18"><pre>
+              <Col span={18}><pre>
                 {validRes}  
               </pre></Col>
             </Row>

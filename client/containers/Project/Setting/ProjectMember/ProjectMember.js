@@ -335,18 +335,18 @@ class ProjectMember extends Component {
               onCancel={this.handleCancel}
             >
               <Row gutter={6} className="modal-input">
-                <Col span="5">
+                <Col span={5}>
                   <div className="label usernamelabel">用户名: </div>
                 </Col>
-                <Col span="15">
+                <Col span={15}>
                   <UsernameAutoComplete callbackState={this.onUserSelect} />
                 </Col>
               </Row>
               <Row gutter={6} className="modal-input">
-                <Col span="5">
+                <Col span={5}>
                   <div className="label usernamelabel">权限: </div>
                 </Col>
-                <Col span="15">
+                <Col span={15}>
                   <Select defaultValue="dev" className="select" onChange={this.changeNewMemberRole}>
                     <Option value="owner">组长</Option>
                     <Option value="dev">开发者</Option>
@@ -365,10 +365,10 @@ class ProjectMember extends Component {
             onCancel={this.handleModalCancel}
           >
             <Row gutter={6} className="modal-input">
-              <Col span="5">
+              <Col span={5}>
                 <div className="label usernamelabel">项目名: </div>
               </Col>
-              <Col span="15">
+              <Col span={15}>
                 <Select
                   showSearch
                   style={{ width: 200 }}

@@ -286,26 +286,26 @@ export default class GroupList extends Component {
             className="add-group-modal"
           >
             <Row gutter={6} className="modal-input">
-              <Col span="5">
+              <Col span={5}>
                 <div className="label">分组名：</div>
               </Col>
-              <Col span="15">
+              <Col span={15}>
                 <Input placeholder="请输入分组名称" onChange={this.inputNewGroupName} />
               </Col>
             </Row>
             <Row gutter={6} className="modal-input">
-              <Col span="5">
+              <Col span={5}>
                 <div className="label">简介：</div>
               </Col>
-              <Col span="15">
+              <Col span={15}>
                 <TextArea rows={3} placeholder="请输入分组描述" onChange={this.inputNewGroupDesc} />
               </Col>
             </Row>
             <Row gutter={6} className="modal-input">
-              <Col span="5">
+              <Col span={5}>
                 <div className="label">组长：</div>
               </Col>
-              <Col span="15">
+              <Col span={15}>
                 <UsernameAutoComplete callbackState={this.onUserSelect} />
               </Col>
             </Row>

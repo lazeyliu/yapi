@@ -243,8 +243,8 @@ class TimeTree extends Component {
         </Modal>
         {this.props.type === 'project' && (
           <Row className="news-search">
-            <Col span="3">选择查询的 Api：</Col>
-            <Col span="10">
+            <Col span={3}>选择查询的 Api：</Col>
+            <Col span={10}>
               <AutoComplete
                 onSelect={this.handleSelectApi}
                 style={{ width: '100%' }}
