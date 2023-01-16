@@ -299,11 +299,11 @@ async function crossRequest(defaultOptions, preScript, afterScript, commonContex
     axios: axios,
   })
 
-  let scriptEnable = false;
-  try {
-    const yapi = require('../server/yapi');
-    scriptEnable = yapi.WEBCONFIG.scriptEnable === true;
-  } catch (err) {}
+  let scriptEnable = true;
+  // try {
+  //   const yapi = require('../server/yapi');
+  //   scriptEnable = yapi.WEBCONFIG.scriptEnable === true;
+  // } catch (err) {}
 
   if (preScript && scriptEnable) {
     context = await sandbox(context, preScript)
