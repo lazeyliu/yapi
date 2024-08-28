@@ -1,4 +1,49 @@
 更新日志
+## [1.12.0](https://github.com/fjc0k/yapi-x/compare/v1.10.2...v1.12.0) (2024-08-28)
+
+
+### 文档
+
+* 增加安装、配置说明 ([3fc6502](https://github.com/fjc0k/yapi-x/commit/3fc6502eeaf5b11651e2dfd92cb440e299864667))
+
+
+### 特性
+
+* YApi-X 浏览器插件正式发布 ([e1eccd7](https://github.com/fjc0k/yapi-x/commit/e1eccd740e6dab60e7d869f794e5282ef153742b))
+* 代码风格调整 ([29e462b](https://github.com/fjc0k/yapi-x/commit/29e462b11cf8c7642bb808c51716583bf59009fc))
+* 完成 YApi-X 浏览器插件开发 ([2ff8abf](https://github.com/fjc0k/yapi-x/commit/2ff8abf05ba7f97c66efd0e5c065877ede04b257))
+* 完成浏览器插件开发 (close: [#5](https://github.com/fjc0k/yapi-x/issues/5)) ([f006c4a](https://github.com/fjc0k/yapi-x/commit/f006c4acbe29fa8865b987b5d15ff54ad17deb3f))
+* 支持 adminPassword 设置管理员密码 ([2c68000](https://github.com/fjc0k/yapi-x/commit/2c680000c6e05b9096f658d1b878289120ff0dec))
+* 支持 webdav 扩展的 HTTP 请求方法 PROPFIND, PROPPATCH, MKCOL, COPY, MOVE, LOCK, UNLOCK ([15607ca](https://github.com/fjc0k/yapi-x/commit/15607ca33578fef3e18df32009526155a57f863f))
+* 支持为查询参数添加类型 ([cb347b6](https://github.com/fjc0k/yapi-x/commit/cb347b68d35f2bea382365b502b985a2a42c05fb))
+* 支持为路径参数添加类型 ([235f044](https://github.com/fjc0k/yapi-x/commit/235f044688e85a97b48b6deabe197aca76e80288))
+* 构建 Docker 镜像 ([504e0ef](https://github.com/fjc0k/yapi-x/commit/504e0ef95467a0454675d4ac12c441efc53c5279))
+* 请求参数设置下的 Headers 支持批量添加 ([e6c29b6](https://github.com/fjc0k/yapi-x/commit/e6c29b6be12750360e66892c4a1d40e7b8242dce))
+* **浏览器插件:** 支持 bypass 约定 ([1957f88](https://github.com/fjc0k/yapi-x/commit/1957f88da35bd129940f0b10519f4159a29f44b6))
+* 支持复制分类 ([fc25a31](https://github.com/fjc0k/yapi-x/commit/fc25a31136d8fd3e083abf3f4eeffacaec195024))
+* 支持自动预览图片、音视频 (close: [#4](https://github.com/fjc0k/yapi-x/issues/4)) ([a491d48](https://github.com/fjc0k/yapi-x/commit/a491d485f1a51784e4b470a71a40657bee5c793c))
+* 项目图标支持自传图片 (close: [#9](https://github.com/fjc0k/yapi-x/issues/9)) ([6143d27](https://github.com/fjc0k/yapi-x/commit/6143d2703a6fc0de1d1c73a4e473f7d6386b7ded))
+* **复制分类:** 复制时加载效果、复制完成后自动跳至新分类 ([0aed752](https://github.com/fjc0k/yapi-x/commit/0aed752adba9de3b5ce2d584ff94c6afe5c53df1))
+
+
+### 修复
+
+* Dockerfile ([03cdf05](https://github.com/fjc0k/yapi-x/commit/03cdf05b7d19cc3a0120ed2d310a972355116c02))
+* 修复【Mongo 注入获取 token】的问题 ([25125b5](https://github.com/fjc0k/yapi-x/commit/25125b5c9914298102d0feb65f3af8f15492c97b))
+* 修复【Mongo 注入获取 token】的问题 ([21e4731](https://github.com/fjc0k/yapi-x/commit/21e47318b5ba2fa99331448d7d88fbb1ba09d28b))
+* 去除可能导致文件下载产生错误的因素 ([8cec14d](https://github.com/fjc0k/yapi-x/commit/8cec14dc1b8dd7a0401cf51906528b8eb37fd4cb))
+* 在测试集合中克隆测试用例时，如果该用例来自于外部项目，日志有误 ([#22](https://github.com/fjc0k/yapi-x/issues/22)) ([264b1f0](https://github.com/fjc0k/yapi-x/commit/264b1f096f524bdef3ac4017491caef2f27a5892))
+* **Dockerfile:** 锁定依赖版本 ([b4cf4db](https://github.com/fjc0k/yapi-x/commit/b4cf4db9bcb939a518fd248970d36c5c0907db76))
+* 在测试集合中克隆测试用例时，如果该用例来自于外部项目，克隆结束后路由跳转到外部项目了 ([#21](https://github.com/fjc0k/yapi-x/issues/21)) ([9578397](https://github.com/fjc0k/yapi-x/commit/957839723a271d5a9de2491f7962cfde22aefcff))
+* 更灵活的 path 验证 ([d1b93b8](https://github.com/fjc0k/yapi-x/commit/d1b93b83c3b205d7c780d7979f418192b57eee23))
+* 生成 iife 格式的浏览器插件 ([637839b](https://github.com/fjc0k/yapi-x/commit/637839be39e279d8b897b12c7b3fd20826f5dae4))
+* **项目图标:** 保证自传项目图标在各种场景下正常显示 (close: [#11](https://github.com/fjc0k/yapi-x/issues/11)) ([cdaf432](https://github.com/fjc0k/yapi-x/commit/cdaf432ccdc9accba4a568831f848448952cbc29))
+* 支持 Windows 下开发 (close: [#3](https://github.com/fjc0k/yapi-x/issues/3)) ([0dbad6d](https://github.com/fjc0k/yapi-x/commit/0dbad6de16a472f898a531c26fc60dbd5c3b2e3b))
+* 更改项目图标接口逻辑调整 ([f04d2ea](https://github.com/fjc0k/yapi-x/commit/f04d2ea115c6bcce067e2d0178b4a44d5add26e5))
+* 正确处理内置图标和上传图标的关系 ([e3d63ed](https://github.com/fjc0k/yapi-x/commit/e3d63ed891cb22933ed2afeb245529a602941cb0))
+* **Docker:** dockerignore 去除 static ([54c534a](https://github.com/fjc0k/yapi-x/commit/54c534afd5409a158d4ba819d797bc7be33307b0))
+* **复制分类:** 修复接口复制信息不全 ([3d34a7b](https://github.com/fjc0k/yapi-x/commit/3d34a7bc42e70b00cd5d889af80cc496562013ce))
+
 ## [2.7.0](https://github.com/fjc0k/yapi-x/compare/v2.6.0...v2.7.0) (2021-05-20)
 
 
