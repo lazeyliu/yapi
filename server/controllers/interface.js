@@ -394,7 +394,7 @@ class interfaceController extends baseController {
     let tags = params.tag;
     if (tags && Array.isArray(tags) && tags.length > 0) {
       let projectData = await this.projectModel.get(params.project_id);
-      let tagsInProject = projectData.tag;
+      let tagsInProject = projectData==null?null: projectData.tag;
       let needUpdate = false;
       if (tagsInProject && Array.isArray(tagsInProject) && tagsInProject.length > 0) {
         tags.forEach(tag => {

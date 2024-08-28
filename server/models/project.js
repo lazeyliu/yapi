@@ -86,7 +86,10 @@ class projectModel extends baseModel {
   }
 
   handleEnvNullData(data) {
-    data = data.toObject()
+    if (data == null) {
+      return
+    }
+    data = data.toObject ==null?data : data.toObject()
     data.toObject = () => data
     let isFix = false
     if (Array.isArray(data.env)) {
