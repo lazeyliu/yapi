@@ -265,7 +265,7 @@ class interfaceModel extends baseModel {
       .exec()
   }
 
-  listByInterStatus(catid, interId, status) {
+  listByInterStatus(catid, status,interId) {
     let option = {}
     if (status === 'open') {
       option = {

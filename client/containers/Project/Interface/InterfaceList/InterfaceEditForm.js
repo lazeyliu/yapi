@@ -1521,7 +1521,7 @@ class InterfaceEditForm extends Component {
             className='interface-edit-item'
             style={{ textAlign: 'center', marginTop: '16px' }}>
             {/* <Button type="primary" htmlType="submit">保存1</Button> */}
-            <Affix offsetBottom={0}>
+            <Affix offsetBottom={0} style={{height:'56px'}}>
               <Button
                 className='interface-edit-submit-button'
                 disabled={this.state.submitStatus}

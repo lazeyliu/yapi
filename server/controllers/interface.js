@@ -1250,7 +1250,7 @@ class interfaceController extends baseController {
 
       for (let i = 0, item, list; i < result.length; i++) {
         item = result[i].toObject();
-        list = await this.Model.listByInterStatus(item._id, 'open');
+        list = await this.Model.listByInterStatus(item._id, 'open',interId);
         for (let j = 0; j < list.length; j++) {
           list[j] = list[j].toObject();
           list[j].basepath = basepath;

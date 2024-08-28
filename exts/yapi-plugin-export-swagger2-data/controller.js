@@ -23,7 +23,7 @@ class exportSwaggerController extends baseController {
             newResult = [];
         for (let i = 0, item, list; i < result.length; i++) {
             item = result[i].toObject();
-            list = await this.interModel.listByInterStatus(item._id,interId, status);
+            list = await this.interModel.listByInterStatus(item._id, status,interId);
             if (catId && catId != "" && catId != item._id) {
                 list = []
             }

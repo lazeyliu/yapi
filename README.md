@@ -1,3 +1,27 @@
+# 版本
+> python 版本:  pyenv install 2.7.16 && pyenv local 2.7.16
+> node   版本:  nvm install v12.22.12  && nvm use v12.22.12
+
+# nvm 镜像 配置
+> export NVM_NODEJS_ORG_MIRROR=https://cdn.npmmirror.com/binaries/node
+> export NVM_IOJS_ORG_MIRROR=https://cdn.npmmirror.com/binaries/iojs
+
+# pyenv 镜像
+> export PYTHON_BUILD_MIRROR_URL="https://registry.npmmirror.com/-/binary/python"
+> export PYTHON_BUILD_MIRROR_URL_SKIP_CHECKSUM=1
+
+# 1.第一次安装 下面任何一个都可以
+> 使用锁定的版本 package-lok.json
+> npm install node-sass
+> npm install 
+# 2.编译
+> npm run build-client
+# 3.启动 
+> npm run dev-client
+> npm run dev-server
+
+
+
 # YApi-X
 
 `YApi-X` 基于 [`YApi v1.8.8`](https://github.com/YMFE/yapi/tree/v1.8.8) 开发，相较原版，有以下改动：

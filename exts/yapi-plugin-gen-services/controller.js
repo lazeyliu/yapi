@@ -20,12 +20,12 @@ class exportController extends baseController {
     
   }
 
-  async handleListClass(pid, status) {
+  async handleListClass(pid, interId,status) {
     let result = await this.catModel.list(pid),
       newResult = [];
     for (let i = 0, item, list; i < result.length; i++) {
       item = result[i].toObject();
-      list = await this.interModel.listByInterStatus(item._id, status);
+      list = await this.interModel.listByInterStatus(item._id,status,interId);
       list = list.sort((a, b) => {
         return a.index - b.index;
       });
